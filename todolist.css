@@ -7,7 +7,7 @@
         }
 
         .main{
-            background-image: url(images/netflex.png);
+            background-image: url('netflex.png');
             height: 100vh;
             background-repeat: no-repeat;
             background-position: center;
@@ -103,4 +103,5 @@ margin-right: 8px;
     left: 50px;
     padding: 8px 20px;
     border-radius: 9px;
+
     cursor: pointer;
