@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Parallax Portfolio Hero</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <section class="hero">
+    <div class="layer bg"></div>
+    <div class="layer gradient"></div>
+
+    <div class="hero-content">
+      <div class="floating-icons">
+        <i class="fa-solid fa-code"></i>
+        <i class="fa-solid fa-laptop-code"></i>
+        <i class="fa-solid fa-user-tie"></i>
+        <i class="fa-brands fa-react"></i>
+      </div>
+
+      <div class="text">
+        <h1 class="reveal">Hi, I'm <span>Sheik Abdulla</span></h1>
+        <h2 class="reveal-delay">Full Stack Developer</h2>
+        <p class="reveal-delay2">Building responsive and modern web experiences</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Simple parallax effect
+    document.addEventListener("mousemove", (e) => {
+      document.querySelectorAll(".layer").forEach(layer => {
+        const speed = layer.getAttribute("data-speed") || 0.05;
+        const x = (window.innerWidth - e.pageX*speed) / 100;
+        const y = (window.innerHeight - e.pageY*speed) / 100;
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+      });
+    });
+  </script>
+</body>
+</html>

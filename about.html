@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <style>
+    body {
+      background-image: url('images/background.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 50px;
+      gap: 80px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .about-text {
+      max-width: 600px;
+      animation: slideIn 1.5s ease forwards;
+    }
+
+    .about-text h1 {
+      font-size: 45px;
+      color: rebeccapurple;
+      margin-bottom: 20px;
+      text-transform: capitalize;
+    }
+
+    .about-text p {
+      font-size: 17px;
+      line-height: 1.8;
+      opacity: 0.9;
+    }
+
+    .about-img img {
+      width: 320px;
+      border-radius: 50%;
+      border: 3px solid rebeccapurple;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 30px;
+      left: 40px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border: 2px solid rebeccapurple;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .back-btn:hover {
+      background: rebeccapurple;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="about-container">
+    <div class="about-img">
+      <img src="photo1.png" alt="Profile Photo" />
+    </div>
+
+    <div class="about-text">
+      <h1>About Me</h1>
+      <p>
+        Hi, I'm <b>Sheik Abdulla</b>, a passionate <b>Full Stack Developer</b> with a love for crafting interactive and efficient web applications.  
+        I hold a Master of Computer Applications (MCA) and have worked on both frontend and backend projects using modern technologies such as <b>React, Node.js, Express, and MongoDB</b>.
+      </p>
+      <p>
+        I specialize in creating responsive, user-friendly interfaces while ensuring performance and scalability on the backend.  
+        My mission is to build digital experiences that are not only functional but also visually appealing and meaningful to users.
+      </p>
+      <p>
+        When I'm not coding, I explore UI/UX trends, learn emerging technologies, and contribute to open-source communities.  
+        I believe in continuous learning, collaboration, and building impactful solutions for real-world challenges.
+      </p>
+    </div>
+      <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</a>
+
+  </div>
+</body>
+</html>

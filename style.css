@@ -1,0 +1,720 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+.main{
+    background-image: url('images/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+}
+.welcome{
+    color: #fff;
+    margin-top: 12%;
+    animation: welcome 3s ease backwards;
+
+}
+ @keyframes welcome{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    60%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+} 
+
+.wel{
+
+}
+.wel i{font-size: 24px;color: darkslateblue;margin-right: 16px;margin-bottom: 20px;}
+.lines{
+
+}
+.lines h1{font-size: 38px;text-transform: capitalize;text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+    margin-bottom: 26px;}
+
+.name{
+display: flex;
+align-items: center;
+margin-left: 130px;
+}
+.name p{margin-right: 370px;margin-top: 40px;font-weight: bold;font-size: 32px;color: rebeccapurple;filter: brightness(1.5);font-family: monospace;cursor: pointer;transition: .2s;}
+.name p:hover {
+    color:#fff;
+    text-shadow: 0 0 50px blue;
+}
+.navbar{
+
+}
+.navbar a{text-transform: capitalize;text-decoration: none;color: #fff;margin-left: 80px;font-family: cursive; transition: .2ss;}
+.navbar a:hover{
+    color: red;
+    text-shadow: 0 0 10px red ;
+    
+}
+.about{
+
+position: relative;
+
+top: 126px;
+}
+@keyframes animate{
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
+
+.intro{
+    color: #fff;
+    margin-left: 240px;
+    margin-top: -11px;
+    text-transform: capitalize;
+    animation: animate both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+
+
+.intro p{font-size: 11px;color: #5969cf;margin-bottom: -23px;margin-bottom: 4px;
+     animation: imScroll both;
+     animation-timeline: view();
+     animation-range: entry 20% cover 100vh;
+    }
+    @keyframes imScroll{
+        from{
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+.intro h1{color: #1280e0;margin-bottom: 4px;font-size: 47px;font-weight: bold;
+    animation: abhiScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+   @keyframes abhiScroll{
+        from{
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+
+.intro h2{font-size: 19px;color: #0d378c;font-family: math;margin-bottom: 19px;
+    animation: abtScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+
+}
+   @keyframes abtScroll{
+        from{
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+.intro h5{width: 530px;word-spacing: 2px;font-size: 14px;opacity: 0.8;color: #fff;font-family: sans-serif;
+    animation: icnScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+
+}
+   @keyframes icnScroll{
+        from{
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+.link{
+    color: #fff;
+    margin-left: 235px;
+    font-size: 24px;
+    animation: iconScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+.link i{
+color: #16338a;
+margin-right: 21px;
+margin-top: 20px;
+}
+   @keyframes iconScroll{
+        from{
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+@keyframes pho{
+    from{
+        filter: saturate(0) contrast(4) brightness(1) blur(3px);
+        opacity: 0;
+        scale: .95;
+        translate: 0.4rem;
+    }
+    to{
+     filter: none;
+        opacity: 1;
+        scale: 1;
+        translate: 0.0;    }
+}
+.img{
+     animation: pho both;
+    animation-timeline: view(120% 5%);
+}
+
+
+
+
+.img img{height: 325px;position: relative;top: -333px;left: 858px;border-radius: 100%;background: rebeccapurple;border: solid 2px darkgrey;}
+.second{
+    background-image: url('images/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+} 
+.third{
+    background-image: url('images/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+}
+.me{
+align-items: center;
+color: #fff;
+border: solid 1px rebeccapurple;
+padding: 110px;
+animation: meScroll both;
+animation-timeline: view();
+animation-range: entry 20% cover 100vh;
+}
+@keyframes meScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.me h2{align-items: center;margin-left: 43%;text-transform: capitalize;margin-top: -60px;margin-bottom: 40px;
+    font-family: sans-serif;font-weight: bolder;font-size: 30px;
+    color: rebeccapurple;
+    filter: brightness(1.5);
+
+    animation: aboutScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes aboutScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.me p{ 
+    word-spacing: 3px;
+    text-decoration: none;
+    width: 1270px;
+    font-family: sans-serif;   
+    line-height: 25px;
+    margin-left: 20px;
+    animation: dataScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes dataScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.cv{
+margin-left: 39%;
+margin-top: 55px;
+animation: btnScroll both;
+animation-timeline: view();
+animation-range: entry 20% cover 100vh;
+}
+@keyframes btnScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.cv a{
+text-transform: capitalize;
+text-decoration: 0;
+color: #fff;
+margin-right: 30px;
+border: solid 1px deepskyblue;
+padding: 9px 30px;
+border-radius: 9px;
+background: radial-gradient(black, transparent);
+}
+
+.cv:hover a{
+    background-color: #16338a;
+}
+.fourth{
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 85%;
+    color: #fff;
+}
+.journey{border: solid 1px rebeccapurple;background: radial-gradient(black, transparent);
+    animation: jorScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+
+}
+@keyframes jorScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.journey h2{
+    filter: brightness(1.5);
+    margin-left: 44%;
+    margin-top: 40px;
+    text-transform: capitalize;
+    color: rebeccapurple;
+    font-size: 31px;
+    font-family: sans-serif;
+    animation: myScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes myScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.educate{
+    display: flex;
+}
+.educate p{
+    
+}
+.degree{border-radius: 13px;margin-left: 161px;margin-top: 58px;font-size: 26px;font-family: serif;border: solid 0.5px rebeccapurple;width: 310px;padding: 5px 202px 21px 15px;margin-bottom: 42px;
+    animation: degreeScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes degreeScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.degree p{text-transform: capitalize;font-size: 19px;}
+.degree pre{
+font-size: 10px;
+text-transform: capitalize;
+font-family: sans-serif;
+margin-top: 4px;
+letter-spacing: 1px;
+}
+.degree h5{font-family: serif;width: 457px;font-size: 12px;margin-top: 6px;}
+.internships{
+
+}
+.intern{border-radius: 13px;margin-left: 223px;margin-top: 58px;font-size: 26px;font-family: serif;border: solid 0.5px rebeccapurple;width: 310px;padding: 5px 146px 21px 15px;margin-bottom: 42px;}
+.intern p{text-transform: capitalize;font-size: 19px;}
+.intern pre{
+font-size: 10px;
+text-transform: capitalize;
+font-family: sans-serif;
+margin-top: 4px;
+letter-spacing: 1px;
+}
+.intern h5{
+font-family: serif;
+width: 371px;
+font-size: 12px;
+margin-top: 6px;
+}
+
+.education{
+    display: flex;
+    margin-top: -45px;
+    margin-bottom: 40px;
+}
+.education p{
+    
+}
+.secDegree{border-radius: 13px;margin-left: 161px;margin-top: 58px;font-size: 26px;font-family: serif;border: solid 0.5px rebeccapurple;width: 310px;padding: 5px 202px 21px 15px;margin-bottom: 42px;
+    animation: degreeScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes degreeScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.secDegree p{text-transform: capitalize;font-size: 19px;}
+.secDegree pre{
+font-size: 10px;
+text-transform: capitalize;
+font-family: sans-serif;
+margin-top: 4px;
+letter-spacing: 1px;
+}
+.secDegree h5{font-family: serif;width: 457px;font-size: 12px;margin-top: 6px;}
+.internships{
+
+}
+.intern{border-radius: 13px;margin-left: 223px;margin-top: 58px;font-size: 26px;font-family: serif;border: solid 0.5px rebeccapurple;width: 310px;padding: 5px 146px 21px 15px;margin-bottom: 42px;}
+.intern p{text-transform: capitalize;font-size: 19px;}
+.intern pre{
+font-size: 10px;
+text-transform: capitalize;
+font-family: sans-serif;
+margin-top: 4px;
+letter-spacing: 1px;
+}
+.intern h5{
+font-family: serif;
+width: 371px;
+font-size: 12px;
+margin-top: 6px;
+}
+.fifth{
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80%;
+    color: #fff;
+}
+.skills{
+
+border: solid 1px rebeccapurple;
+  animation: skillsScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes skillsScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.skills p{font-family: sans-serif;margin-left: 46%;font-size: 40px;text-decoration: none;text-transform: capitalize;margin-top: 30px;margin-bottom: 60px;color: rebeccapurple;filter: brightness(1.5);
+    animation: skilsScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes skilsScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.logos{
+      margin-left: 21%;
+      margin-bottom: 60px;
+      animation: logoScroll both;
+      animation-timeline: view();
+      animation-range: entry 20% cover 100vh;
+}
+@keyframes logoScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.logos img{height: 88px;margin-left: 70px;margin-right: 2px; transition: 1s;}
+
+.logos:hover img{
+    transform: scale(1.2);
+}
+.six{
+       background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 110%;
+    color: #fff;
+}
+.pro{
+border: solid 1px rebeccapurple;
+animation: projScroll both;
+animation-timeline: view();
+animation-range: entry 20% cover 100vh;
+}
+@keyframes projScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.pro b{
+    filter: brightness(1.5);
+    font-size: 41px;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    margin-left: 45%;
+    color: rebeccapurple;
+    position: relative;
+    top: 30px;
+    animation: titleScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+@keyframes titleScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.projects{display: flex;margin-left: 3%;margin-top: 110px;margin-bottom: 80px;}
+.project1{border-radius: 7px;margin-left: 175px;border: solid 1px rebeccapurple;padding: 35px 34px 60px 15px; 
+    animation: projectsScroll both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;}
+
+    @keyframes projectsScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+    
+.project1 img{
+height: 150px;
+margin-left: 13px;
+transition: all 1s;
+}
+.project1 p{text-transform: capitalize;text-decoration: none;margin-top: 40px;margin-bottom: 40px;text-align: center;font-family: sans-serif;}
+.project1 a{text-decoration: none;color: #fff;margin-left: 49px;background: rebeccapurple;padding: 6px 30px;border-radius: 4px;border: 0px;text-transform: capitalize;text-align: center; transition: all 1s;}
+
+.project1:hover img{
+    transform: scale(1.2);
+}
+.project1:hover a{
+    transform: scale(1.2);
+    background-color: red;
+}
+.seven{
+     background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    color: #fff;
+}
+.feed{
+border: solid 1px rebeccapurple;
+animation: contactScroll both;
+animation-timeline: view();
+animation-range: entry 20% cover 100vh;
+}
+
+    @keyframes contactScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.peru{
+margin-left: 47%;
+}
+.peru p{ 
+text-transform: capitalize;  
+text-decoration: none;    
+color: rebeccapurple;   
+filter: brightness(1.5);   
+font-size: 32px;   
+font-family: sans-serif;   
+margin-bottom: 70px;  
+margin-top: 30px;
+animation: contactScroll both;
+animation-timeline: view();
+animation-range: entry 20% cover 100vh;
+}
+  @keyframes contactScroll{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.int{
+margin-left: 250px;
+margin-top: 30px;
+display: flex;
+}
+.int input{  
+border: solid 2px #fff; 
+margin-right: 160px; 
+padding: 18px 270px 18px 23px; 
+text-transform: capitalize;
+border-radius: 8px;
+background: radial-gradient(black, transparent); 
+color: #fff; 
+filter: brightness(1.5); 
+font-size: 16px; 
+margin-bottom: 20px;
+animation: contactScroll both;
+animation-timeline: view();
+animation-range: entry 20% cover 100vh;
+}
+
+.int input:focus + lable,
+  .int input:valid + label{ 
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 15px;
+    transform: translate(-15px,-58px) scale(1);
+    opacity: 0.9;
+    filter: brightness(1.3);
+    z-index: 1111;
+}
+
+.int lable{
+position: absolute;
+top: 158px;
+text-transform: capitalize;
+left: 280px;
+font-family: sans-serif;
+opacity: 0.5;
+transition: 0.3s ease;
+}
+
+.text{
+margin-left: 250px;
+margin-top: 30px;
+margin-bottom: 50px;
+}
+.text textarea{
+padding: 20px 916px 151px 30px;  
+text-transform: capitalize;  
+border: solid 2px #fff;  
+background: radial-gradient(black, transparent);  
+color: #fff;  
+font-size: 20px;  
+filter: brightness(1.5);  
+border-radius: 7px;  
+font-family: sans-serif;  
+font-size: 17px;
+animation: contactScroll both;
+animation-timeline: view();
+animation-range: entry 20% cover 100vh;
+}

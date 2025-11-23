@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Ideas | Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      /* background: linear-gradient(135deg, #f5e6ff, #dcd6ff); */
+   background-image: url('images/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+     color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      /* background: rgba(255, 255, 255, 0.9); */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 22px;
+      color: rebeccapurple;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    header a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+      font-size: 15px;
+      border: 1px solid rebeccapurple;
+      padding: 14px 9px;
+      border-radius: 6px;
+      background-color: rebeccapurple;
+    }
+
+    header a:hover {
+      color: rgba(239, 232, 232, 0.849);
+    }
+
+    .ideas-section {
+      text-align: center;
+      padding: 80px 30px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .ideas-section h2 {
+      font-size: 38px;
+      color: rebeccapurple;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .ideas-section p {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      color: white ;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .ideas-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding: 0 50px;
+      animation: slideUp 1.2s ease;
+    }
+
+    .idea-card {
+      background: radial-gradient(black,transparent);
+      border-radius: 20px;
+      border: 1.5px solid rebeccapurple;
+      padding: 30px 20px;
+      box-shadow: 0 4px 12px rgba(2, 0, 3, 0.1);
+      transition: all 0.4s ease;
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    .idea-card i {
+      font-size: 40px;
+      color: rebeccapurple;
+      margin-bottom: 15px;
+      transition: 0.3s;
+    }
+
+    .idea-card h3 {
+      font-size: 20px;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .idea-card p {
+      color: rgb(215, 204, 204);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .idea-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(102, 51, 153, 0.3);
+      background: rebeccapurple;
+    }
+
+    .idea-card:hover i {
+      color: black;
+      transform: rotate(10deg);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .ideas-container {
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Abdulla Sk</h1>
+    <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+  </header>
+
+  <!-- Ideas Section -->
+  <section class="ideas-section">
+    <h2>Smart Ideas 💡</h2>
+    <p>
+      These are some creative, innovative, and future-focused ideas to make my
+      portfolio more interactive, intelligent, and visually impactful.
+    </p>
+
+    <div class="ideas-container">
+      <div class="idea-card">
+        <i class="fa-solid fa-robot"></i>
+        <h3>AI Chat Assistant</h3>
+        <p>
+          Integrate a chatbot that can introduce me, answer questions, and
+          interact naturally using simple AI models.
+        </p>
+      </div>
+
+      <div class="idea-card">
+        <i class="fa-solid fa-moon"></i>
+        <h3>Dark / Light Mode</h3>
+        <p>
+          Add a theme toggle button that lets visitors switch between light and
+          dark modes for a personalized look.
+        </p>
+      </div>
+
+      <div class="idea-card">
+        <i class="fa-solid fa-timeline"></i>
+        <h3>Animated Career Timeline</h3>
+        <p>
+          Display my academic and professional journey using a scroll-triggered
+          animation timeline.
+        </p>
+      </div>
+
+      <div class="idea-card">
+        <i class="fa-solid fa-language"></i>
+        <h3>Multi-Language Support</h3>
+        <p>
+          Add a feature allowing users to switch between English and other
+          languages for accessibility.
+        </p>
+      </div>
+
+      <div class="idea-card">
+        <i class="fa-solid fa-medal"></i>
+        <h3>Achievements & Badges</h3>
+        <p>
+          Showcase certificates and awards with digital badges that expand on
+          hover for details.
+        </p>
+      </div>
+
+      <div class="idea-card">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <h3>Interactive Projects Gallery</h3>
+        <p>
+          Add motion-based animations to project thumbnails that flip, scale, or
+          reveal code previews when hovered.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- <footer>
+    © 2025 Sheik Abdulla | Designed & Coded with 💜 Passion
+  </footer> -->
+
+  <!-- JavaScript for scroll animation -->
+  <script>
+    const cards = document.querySelectorAll(".idea-card");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = "slideUp 0.8s ease forwards";
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>

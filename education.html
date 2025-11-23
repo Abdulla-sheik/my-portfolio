@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Education - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+  <style>
+    body {
+      background-image: url('images/background.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .education-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .education-section h1 {
+      font-size: 45px;
+      color: rebeccapurple;
+      margin-bottom: 40px;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      animation: slideDown 1s ease forwards;
+    }
+
+    .edu-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .edu-card {
+      width: 330px;
+      background: radial-gradient(black, transparent);
+      border: 2px solid rebeccapurple;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: left;
+      transition: transform 0.4s, box-shadow 0.4s;
+      animation: slideUp 1.5s ease forwards;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px rebeccapurple;
+    }
+
+    .edu-card h2 {
+      font-size: 22px;
+      color: #b77fff;
+      text-transform: capitalize;
+      margin-bottom: 10px;
+    }
+
+    .edu-card h4 {
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 10px;
+      color: #ccc;
+    }
+
+    .edu-card p {
+      font-size: 15px;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 30px;
+      left: 40px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border: 2px solid rebeccapurple;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .back-btn:hover {
+      background: rebeccapurple;
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</a>
+
+  <div class="education-section">
+    <h1>My Education Journey</h1>
+
+    <div class="edu-cards">
+
+      <div class="edu-card">
+        <h2>BSc Computer Science</h2>
+        <h4>Maths, Statistics, Computer Science (MSCs)</h4>
+        <p>I completed my Bachelor of Science (BSc) in Computer Science, where I built a strong foundation in programming, data structures, and algorithms — preparing me for advanced IT roles.</p>
+      </div>
+
+      <div class="edu-card">
+        <h2>Master of Computer Applications (MCA)</h2>
+        <h4>Specialization: Software Development & AI</h4>
+        <p>My MCA journey deepened my knowledge in full-stack development, artificial intelligence, and software engineering. It helped me develop analytical and project management skills through hands-on learning.</p>
+      </div>
+
+      <div class="edu-card">
+        <h2>Internship - Full Stack Web Development</h2>
+        <h4>Amaravati Institute, Rajahmundry</h4>
+        <p>During my internship, I worked on real-time web applications using modern frameworks like React and Node.js. It gave me exposure to agile workflows and deployment strategies.</p>
+      </div>
+
+      <div class="edu-card">
+        <h2>Internship - Frontend & AI</h2>
+        <h4>Frankline Tech Company</h4>
+        <p>This short-term internship focused on frontend UI design and AI integration, enhancing my creativity and technical precision for user-friendly web experiences.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

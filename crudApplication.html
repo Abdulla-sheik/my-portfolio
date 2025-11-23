@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car CRUD App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: radial-gradient(black, transparent);  
+      margin: 0;
+      padding: 20px;
+    background-image: url('images/car1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;  
+    backdrop-filter: blur(3px);
+
+    
+  }
+  a{
+    color: white;
+    border: 3px solid black;
+    padding: 8px 26px;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: black;
+    cursor: pointer;
+  }
+  i{
+    margin-right: 4px;
+  }
+
+    h1 {
+      text-align: center;
+      color: black;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: radial-gradient(black, transparent);  
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 5px;
+      flex: 1;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: radial-gradient(black, transparent);  
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+         background: radial-gradient(black, transparent);  
+    }
+
+    .search-bar {
+      margin-bottom: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid rgb(223, 211, 211);
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: black;
+      color: white;
+    }
+    td{
+        color: white;
+    }
+
+    .actions button {
+      margin-right: 5px;
+    }
+
+    .actions .edit {
+      background: #28a745;
+    }
+
+    .actions .edit:hover {
+      background: #1e7e34;
+    }
+
+    .actions .delete {
+      background: #dc3545;
+    }
+
+    .actions .delete:hover {
+      background: #b52a37;
+    }
+  </style>
+</head>
+<body>
+    <a href="C:\Users\ramesh\OneDrive\Desktop\create\projects.html"><i class="fa-solid fa-arrow-left"></i>Back</a>
+  <h1>Car Management CRUD App</h1>
+  <div class="container">
+    <div class="form-group">
+      <input type="text" id="carName" placeholder="Car Name">
+      <input type="text" id="carBrand" placeholder="Brand">
+      <input type="number" id="carYear" placeholder="Year">
+      <button id="addBtn">Add Car</button>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by name or brand...">
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Brand</th>
+          <th>Year</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="carTableBody"></tbody>
+    </table>
+  </div>
+
+  <script>
+    let cars = [
+      { name: "Model S", brand: "Tesla", year: 2022 },
+      { name: "Civic", brand: "Honda", year: 2019 },
+      { name: "Corolla", brand: "Toyota", year: 2020 },
+      { name: "BMW X1", brand: "BMW", year: 2025 },
+      {name: "Jaguar F-Pace",brand: "Jaguar", year: 2025},
+
+    ];
+
+    let editIndex = null;
+
+    const carTableBody = document.getElementById("carTableBody");
+    const addBtn = document.getElementById("addBtn");
+    const searchInput = document.getElementById("searchInput");
+
+    function renderTable(filteredCars = cars) {
+      carTableBody.innerHTML = "";
+      filteredCars.forEach((car, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${index + 1}</td>
+          <td>${car.name}</td>
+          <td>${car.brand}</td>
+          <td>${car.year}</td>
+          <td class="actions">
+            <button class="edit" onclick="editCar(${index})">Edit</button>
+            <button class="delete" onclick="deleteCar(${index})">Delete</button>
+          </td>
+        `;
+        carTableBody.appendChild(row);
+      });
+    }
+
+    function addCar() {
+      const name = document.getElementById("carName").value.trim();
+      const brand = document.getElementById("carBrand").value.trim();
+      const year = document.getElementById("carYear").value.trim();
+
+      if (!name || !brand || !year) {
+        alert("Please fill all fields!");
+        return;
+      }
+
+      if (editIndex === null) {
+        cars.push({ name, brand, year });
+      } else {
+        cars[editIndex] = { name, brand, year };
+        editIndex = null;
+        addBtn.textContent = "Add Car";
+      }
+
+      clearForm();
+      renderTable();
+    }
+
+    function editCar(index) {
+      const car = cars[index];
+      document.getElementById("carName").value = car.name;
+      document.getElementById("carBrand").value = car.brand;
+      document.getElementById("carYear").value = car.year;
+      editIndex = index;
+      addBtn.textContent = "Update Car";
+    }
+
+    function deleteCar(index) {
+      if (confirm("Are you sure you want to delete this car?")) {
+        cars.splice(index, 1);
+        renderTable();
+      }
+    }
+
+    function clearForm() {
+      document.getElementById("carName").value = "";
+      document.getElementById("carBrand").value = "";
+      document.getElementById("carYear").value = "";
+    }
+
+    searchInput.addEventListener("input", (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+      const filtered = cars.filter(
+        (car) =>
+          car.name.toLowerCase().includes(searchTerm) ||
+          car.brand.toLowerCase().includes(searchTerm)
+      );
+      renderTable(filtered);
+    });
+
+    addBtn.addEventListener("click", addCar);
+    renderTable();
+  </script>
+</body>
+</html>
